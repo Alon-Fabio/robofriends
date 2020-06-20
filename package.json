@@ -2,7 +2,7 @@
   "name": "robofriends",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alon-fabio.github.io/RoboFriends/",
+  "homepage": "https://Alon-Fabio.github.io/robofriends/",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
