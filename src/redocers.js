@@ -11,7 +11,7 @@ const initialStateSearch = {
 export const searchRobots = (state=initialStateSearch, action={}) => {
     switch(action.type) {
         case CHANGE_SEARCH_FIELD:
-            return Object.assign({},state, {searchField:action.payloud})
+            return Object.assign({},state, {searchField:action.payload})
         default:
             return state
     }
@@ -28,9 +28,9 @@ export const requestRobotsReducer = (state=initialStateRobots, action={}) => {
         case REQUES_ROBOTS_PENDING:
             return Object.assign({} , state, {isPending: true})
         case REQUES_ROBOTS_FAILED:
-            return Object.assign({} , state, {failed: action.payloud, isPending: false})
+            return Object.assign({} , state, {failed: action.payload, isPending: false})
         case REQUES_ROBOTS_SUCCESS:
-            return Object.assign({} , state, {robots: action.payloud, isPending: false})
+            return Object.assign({} , state, {robots: action.payload, isPending: false})
         default:
             return state
     }
