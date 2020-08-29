@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MainPage tests Snapshot test 1`] = `
+exports[`MainPage tests Snapshot with no users 1`] = `
 <div
   className="tc"
 >

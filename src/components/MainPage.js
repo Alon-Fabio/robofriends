@@ -33,7 +33,7 @@ class MainPage extends Component {
 
   render() {
     // const { robots} = this.state;
-    const {searchField, onSearchChange, robots, isPending} = this.props
+    const {onSearchChange, robots, isPending} = this.props
     
     return isPending ?
       <h1>Loading</h1> :
