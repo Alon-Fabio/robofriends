@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import CardList from './CardList.js';
 import renderer from 'react-test-renderer';
 import {robots} from "../robots.js";

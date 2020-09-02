@@ -1,5 +1,3 @@
-import renderer from 'react-test-renderer';
-import {shallow} from 'enzyme';
 const constants = require('./constants')
 
 // let wraper
