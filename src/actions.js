@@ -8,11 +8,21 @@ export const setSearchField = (text) => ({
     type:CHANGE_SEARCH_FIELD,
     payload:text
 })
-
-export const requestRobotsAction = () => (dispatch) => {
+const robotsUrl = 'https://jsonplaceholder.typicode.com/users'
+export const requestRobotsAction = (Url=robotsUrl) => async (dispatch) => {
+    try{
     dispatch({type: REQUES_ROBOTS_PENDING});
-    fetch('https://jsonplaceholder.typicode.com/users')
+    const data = await fetch(Url)
       .then(response=> response.json())
-      .then(data => dispatch({type: REQUES_ROBOTS_SUCCESS, payload: data}))
-      .catch(error => dispatch({type: REQUES_ROBOTS_FAILED, payload: error}))
+    dispatch({type: REQUES_ROBOTS_SUCCESS, payload: data})
+    } catch(error) {
+    dispatch({type: REQUES_ROBOTS_FAILED, payload: error})
+    }
 }
+// export const requestRobotsAction = (robotsUrl) => (dispatch) => {
+//     dispatch({type: REQUES_ROBOTS_PENDING});
+//     fetch(robotsUrl)
+//         .then(response=> response.json())
+//         .then((data)=> dispatch({type: REQUES_ROBOTS_SUCCESS, payload: data}))
+//         .catch(error => { dispatch({type: REQUES_ROBOTS_FAILED, payload: error})})
+// }

@@ -27,7 +27,7 @@ beforeEach(()=>{
             <TestComponent />
         </ErrorBoundary> 
     )
-
+    // Will print out the error, but is a good test for production.
     wrapperMountWithError = mount(
         <ErrorBoundary > 
             <ComponentWithError />
@@ -39,7 +39,7 @@ describe("Testing ErroeBoundary", ()=>{
     it("Snapshot with TestComponent", ()=>{
         expect(wrapper).toMatchSnapshot()
     })
-
+    // Will print out the error, but is a good test for production.
     it("Error in component", ()=>{
         expect(wrapperMountWithError.find('h1').text()).toEqual("Opsss.. this souldnt have happend")
     })
