@@ -13,7 +13,7 @@ jobs:
   node-tests:
     - node/test
 workflows:
-version: 2.1
+  version: 2.1
   build-test-deploy:
     jobs:
       - build
