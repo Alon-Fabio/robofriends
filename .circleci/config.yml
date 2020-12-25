@@ -8,3 +8,8 @@ jobs:
       - run: echo "hello world" # run the `echo` command
   node-tests:
     - node/test
+workflows:
+  build_and_test:
+    jobs:
+      - rundocker
+      - node-tests
