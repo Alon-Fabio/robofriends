@@ -1,4 +1,5 @@
 version: 2.1
+
   jobs:
     rundocker:
       build:
@@ -7,6 +8,5 @@ version: 2.1
         steps:
           - checkout # check out the code in the project directory
           - run: echo "hello world" # run the `echo` command
-  jobs:
     node-tests:
       - node/test
