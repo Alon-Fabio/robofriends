@@ -4,5 +4,6 @@ orbs:
 workflows:
   node-tests:
     jobs:
-      - node/test
-      - run: echo "hello world" # run the `echo` command
+      steps:
+        - node/test
+        - run: echo "hello world" # run the `echo` command
