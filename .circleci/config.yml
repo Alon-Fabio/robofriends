@@ -7,5 +7,4 @@ workflows:
       - node/test
   sayHello:
     jobs:
-      - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
