@@ -3,6 +3,7 @@ workflows:
   node-tests:
     jobs:
       - node/test
+workflows:
   run-docker:
     jobs:
       build:
