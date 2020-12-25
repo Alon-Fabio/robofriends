@@ -5,6 +5,4 @@ workflows:
   node-tests:
     jobs:
       - node/test
-sayhallo:
-  jobs:
-    - run: echo "hello world" # run the `echo` command
+      - run: echo "hello world" # run the `echo` command
