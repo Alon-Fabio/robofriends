@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 jobs:
   rundocker:
     docker:
@@ -9,6 +9,7 @@ jobs:
   node-tests:
     - node/test
 workflows:
+  version: 2
   build_and_test:
     jobs:
       - rundocker
