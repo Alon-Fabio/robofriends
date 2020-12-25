@@ -5,6 +5,7 @@ workflows:
   node-tests:
     jobs:
       - node/test
-  sayhallo:
+sayhallo:
+  docker:
     jobs:
       - run: echo "hello world" # run the `echo` command
