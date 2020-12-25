@@ -1,10 +1,6 @@
 version: 2.1
 workflows:
-  node-tests:
-    jobs:
-      - node/test
-workflows:
-  run-docker:
+  rundocker:
     jobs:
       build:
         docker:
@@ -12,3 +8,6 @@ workflows:
         steps:
           - checkout # check out the code in the project directory
           - run: echo "hello world" # run the `echo` command
+  node-tests:
+    jobs:
+      - node/test
