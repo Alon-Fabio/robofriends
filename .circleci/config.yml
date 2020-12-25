@@ -1,6 +1,5 @@
 version: 2.1
-orbs:
-  node: circleci/node@4.1.0
+
 jobs:
   build:
     docker:
@@ -9,7 +8,8 @@ jobs:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
   node-tests:
-    - node/test
+    docker:
+      - run: npm run test
 workflows:
   version: 2.1
   build-test-deploy:
