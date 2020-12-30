@@ -1,20 +1,26 @@
 version: 2.1
 
 jobs:
-  alon:
+  build:
     docker:
       - image: cimg/node:14.10.1 # the primary container, where your job's commands are run
     steps:
-      - checkout # check out the code in the project directory
-      - run: echo "hello world" # run the `echo` command
-  katy:
+      - checkout
+      - run: echo "Running npm install...."
+      - run: npm install # installing npm
+      - run: npm build # building project
+  testing:
     docker:
       - image: cimg/node:14.10.1 # the primary container, where your job's commands are run
     steps:
-      - run: echo "Hi katy"
+      - run: echo "Running testes with Jest...."
+      - run: npm install # installing npm
+      - run: npm test # running tests
 workflows:
   version: 2.1
-  alon_katy:
+  build_test:
     jobs:
-      - alon
-      - katy
+      - build
+      - test:
+          - requires:
+              - build
