@@ -13,6 +13,7 @@ jobs:
     docker:
       - image: cimg/node:14.10.1 # the primary container, where your job's commands are run
     steps:
+      - checkout
       - run: echo "Running testes with Jest...."
       - run: npm install # installing npm
       - run: npm test # running tests
