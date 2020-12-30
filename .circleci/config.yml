@@ -1,4 +1,4 @@
-version: 2.1
+version: 2.0
 
 jobs:
   build:
@@ -7,12 +7,3 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
-  node-tests:
-    docker:
-      - run: npm run test
-workflows:
-  version: 2.1
-  build-test-deploy:
-    jobs:
-      - build
-      - node-tests
