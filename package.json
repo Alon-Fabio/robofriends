@@ -38,5 +38,19 @@
     "enzyme-adapter-react-16": "^1.15.5",
     "gh-pages": "^2.2.0",
     "redux-mock-store": "^1.5.4"
+  },
+  "description": "Tutorial for udemy course - React\r To run the project:",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alon-Fabio/RoboFriends.git"
+  },
+  "keywords": [
+    "robots"
+  ],
+  "author": "Alon Fabio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alon-Fabio/RoboFriends/issues"
   }
 }
